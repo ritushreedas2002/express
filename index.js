@@ -42,7 +42,7 @@ const swaggerOptions = {
     },
     servers: [
       {
-        url: process.env.SERVER_URL || "http://localhost:4000", // Dynamic URL based on environment
+        url: "https://express-dun-sigma.vercel.app", 
       },
     ],
     components: {
