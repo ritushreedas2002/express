@@ -42,7 +42,7 @@ const swaggerOptions = {
     },
     servers: [
       {
-        url: "https://express-dun-sigma.vercel.app", 
+        url: "https://express-dun-sigma.vercel.app/", 
       },
     ],
     components: {
