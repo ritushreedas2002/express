@@ -42,7 +42,7 @@ const swaggerOptions = {
     },
     servers: [
       {
-        url: process.env.SERVER_URL || "http://localhost:5000", // Dynamic URL based on environment
+        url: process.env.SERVER_URL || "http://localhost:4000", // Dynamic URL based on environment
       },
     ],
     components: {
@@ -79,9 +79,9 @@ app.get("/", (req, res) => {
 
 // API Routes
 app.use("/api/auth", require("./routes/authRoutes"));
+app.use("/api/cars", require("./routes/carRoutes"));
 
-
-port=process.env.PORT||5000;
+port=process.env.PORT;
 
 app.listen(port,()=>{
   console.log("server listening");
