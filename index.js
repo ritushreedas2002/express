@@ -6,7 +6,6 @@ const swaggerUi = require("swagger-ui-express");
 const cors = require("cors");
 const app = express();
 
-// Connect to Database
 connectDB();
 
 // Allowed Origins for CORS
@@ -27,7 +26,6 @@ const corsOptions = {
   credentials: true,
 };
 
-// Use JSON parser and CORS
 app.use(express.json());
 app.use(cors(corsOptions));
 
