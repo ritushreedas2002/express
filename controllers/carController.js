@@ -30,13 +30,13 @@ exports.createCar = async (req, res) => {
 
 
 exports.getCars = async (req, res) => {
-    try {
-      const cars = await Car.find(); 
-      res.json(cars);
-    } catch (err) {
-      res.status(500).send("Server Error");
-    }
-  };
+  try {
+    const cars = await Car.find({ user: req.user.userId });
+    res.json(cars);
+  } catch (err) {
+    res.status(500).send("Server Error");
+  }
+};
 
 exports.updateCar = async (req, res) => {
   try {
